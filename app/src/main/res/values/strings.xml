@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ToDoList</string>
     <string name="action_settings">Settings</string>
+    <string name="note_title">Note Title</string>
+    <string name="note_date">20/02/2017</string>
+    <string name="note_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt ornare metus id vehicula. Proin a lacus id ex porta vulputate. Vestibulum id blandit lorem. Integer mattis urna in quam pretium dictum. Vestibulum nec ex vitae diam imperdiet pharetra id non enim. Nullam mollis augue nec nunc placerat suscipit. Integer.</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete">delete</string>
+    <string name="edit">edit</string>
 </resources>

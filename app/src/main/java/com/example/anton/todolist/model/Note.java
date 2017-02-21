@@ -10,10 +10,14 @@ public class Note {
     private String ultimaModifica;
     private String corpo;
     private String dataScadenza;
-    public enum Stato{
-        CHECKED,
-        UNCHECKED
-    };
+
+    /*public Note(String titolo, String dataCreazione, String ultimaModifica, String corpo, String dataScadenza) {
+        this.titolo = titolo;
+        this.dataCreazione = dataCreazione;
+        this.ultimaModifica = ultimaModifica;
+        this.corpo = corpo;
+        this.dataScadenza = dataScadenza;
+    }*/
 
     public String getTitolo() {
         return titolo;

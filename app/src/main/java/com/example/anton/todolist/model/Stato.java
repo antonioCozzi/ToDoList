@@ -5,4 +5,7 @@ package com.example.anton.todolist.model;
  */
 
 public enum Stato {
+    CHECKED,
+    UNCHECKED,
+    STORED
 }
