@@ -10,7 +10,15 @@ public class Note {
     private String ultimaModifica;
     private String corpo;
     private String dataScadenza;
+    private int id;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     /*public Note(String titolo, String dataCreazione, String ultimaModifica, String corpo, String dataScadenza) {
         this.titolo = titolo;
         this.dataCreazione = dataCreazione;

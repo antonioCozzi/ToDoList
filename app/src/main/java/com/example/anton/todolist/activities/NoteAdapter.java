@@ -37,13 +37,14 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteVH> {
         return dataSet;
     }
 
-    public void setDataSet(ArrayList<Note> dataSet) {
-        this.dataSet = dataSet;
-    }
-
     public void addNote(Note note){
         dataSet.add(0, note);
         notifyItemInserted(0);
+    }
+
+    public void setDataSet(ArrayList<Note> dataSet){
+        this.dataSet = dataSet;
+        notifyDataSetChanged();
     }
 
     public void removeNote(int position){

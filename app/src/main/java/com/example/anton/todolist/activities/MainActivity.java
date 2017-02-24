@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -33,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView noteRv;
     LinearLayoutManager linearLayoutManager;
     NoteAdapter noteAdapter;
+    DataBaseHandler dataBaseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +42,16 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         intent = getIntent();
 
+        ArrayList<Note> notes = new ArrayList<>();
+        notes = dataBaseHandler.getAllNotes();
+        noteAdapter.setDataSet(notes);
         noteRv = (RecyclerView) findViewById(R.id.recycler_view);
         linearLayoutManager = new LinearLayoutManager(this);
         noteAdapter = new NoteAdapter(this);
         noteRv.setLayoutManager(linearLayoutManager);
         noteRv.setAdapter(noteAdapter);
         noteAdapter.setDataSet(getNotes());
+        dataBaseHandler = new DataBaseHandler(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             Note note = new Note();
             note.setTitolo(data.getStringExtra(EXTRA_TITLE));
             note.setCorpo(data.getStringExtra(EXTRA_BODY));
+            dataBaseHandler.addNote(note);
             noteAdapter.addNote(note);
         }
     }

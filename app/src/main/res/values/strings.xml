@@ -7,4 +7,6 @@
     <string name="confirm">Confirm</string>
     <string name="delete">delete</string>
     <string name="edit">edit</string>
+    <string name="todo">To do</string>
+    <string name="archived">archived</string>
 </resources>
